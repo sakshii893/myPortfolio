@@ -75,10 +75,16 @@ const ModelInner = ({
     try {
       if (ext === 'glb' || ext === 'gltf') {
         const gltf = useGLTF(url);
-        return gltf.scene.clone();
+        return Array.isArray(gltf) ? gltf[0].scene.clone() : gltf.scene.clone();
       }
-      if (ext === 'fbx') return useFBX(url).clone();
-      if (ext === 'obj') return useLoader(OBJLoader, url).clone();
+      if (ext === 'fbx') {
+        const fbx = useFBX(url);
+        return Array.isArray(fbx) ? fbx[0].clone() : fbx.clone();
+      }
+      if (ext === 'obj') {
+        const obj = useLoader(OBJLoader, url);
+        return Array.isArray(obj) ? obj[0].clone() : obj.clone();
+      }
     } catch (error) {
       console.error('Error loading model:', error);
     }
