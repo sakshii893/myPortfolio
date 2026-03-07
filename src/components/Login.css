@@ -1,0 +1,158 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.login-container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  gap: 60px;
+  align-items: center;
+}
+
+.login-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-content {
+  text-align: center;
+  padding: 40px;
+}
+
+.loading-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  background-image: linear-gradient(to bottom, #fff, #6f6fbe);
+  background-size: 1em 1.5em;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.progress-bar {
+  width: 300px;
+  height: 8px;
+  background: rgba(138, 43, 226, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  border: 1px solid rgba(138, 43, 226, 0.3);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #8a2be2, #4169e1);
+  border-radius: 10px;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.6);
+}
+
+.loading-percentage {
+  font-size: 1.5rem;
+  color: #8a2be2;
+  font-weight: 600;
+}
+
+.login-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panda-container {
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background: rgba(138, 43, 226, 0.05);
+  border: 1px solid rgba(138, 43, 226, 0.2);
+  box-shadow: 0 20px 60px rgba(138, 43, 226, 0.3);
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.panda-image {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  transition: transform 0.1s ease-out;
+  filter: drop-shadow(0 10px 30px rgba(138, 43, 226, 0.3));
+}
+
+@media (max-width: 1024px) {
+  .login-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .login-left {
+    width: 100%;
+  }
+
+  .panda-container {
+    max-width: 400px;
+    height: 400px;
+  }
+
+  .login-right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .loading-title {
+    font-size: 3rem;
+  }
+
+  .panda-container {
+    max-width: 350px;
+    height: 350px;
+  }
+
+  .progress-bar {
+    width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-page {
+    padding: 10px;
+  }
+
+  .loading-title {
+    font-size: 2.5rem;
+  }
+
+  .panda-container {
+    max-width: 300px;
+    height: 300px;
+  }
+
+  .progress-bar {
+    width: 200px;
+  }
+}

@@ -1,0 +1,119 @@
+.logo-loop {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 40px 0;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.logo-loop-inner {
+  display: flex;
+  gap: 60px;
+  animation: scroll 30s linear infinite;
+  width: fit-content;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-loop:hover .logo-loop-inner {
+  animation-play-state: paused;
+}
+
+.logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  min-width: 100px;
+  transition: transform 0.3s ease;
+}
+
+.logo-item:hover {
+  transform: translateY(-10px);
+}
+
+.logo-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(138, 43, 226, 0.1);
+  border: 2px solid rgba(138, 43, 226, 0.3);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.logo-icon svg {
+  width: 40px;
+  height: 40px;
+  color: #8a2be2;
+  transition: all 0.3s ease;
+}
+
+.logo-item:hover .logo-icon {
+  background: linear-gradient(135deg, #8a2be2, #4169e1);
+  border-color: transparent;
+  box-shadow: 0 10px 25px rgba(138, 43, 226, 0.4);
+}
+
+.logo-item:hover .logo-icon svg {
+  color: white;
+  transform: scale(1.1);
+}
+
+.logo-name {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  font-weight: 500;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.logo-item:hover .logo-name {
+  color: #8a2be2;
+}
+
+@media (max-width: 768px) {
+  .logo-loop-inner {
+    gap: 40px;
+  }
+
+  .logo-item {
+    min-width: 80px;
+  }
+
+  .logo-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo-icon svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .logo-name {
+    font-size: 0.85rem;
+  }
+}
