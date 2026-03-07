@@ -1,73 +1,179 @@
-# React + TypeScript + Vite
+# Sakshi Pawar - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive portfolio website showcasing my work as a Software Engineer.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Visit the live site: [https://sakshii893.github.io/myPortfolio/](https://sakshii893.github.io/myPortfolio/)
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Interactive Loading Screen** - 5-second animated loading with panda mascot
+- **Custom Cursor** - Animated target cursor with corner effects
+- **3D Tilt Profile Card** - Holographic card with mouse-following effects
+- **Mac-style Dock Navigation** - Magnifying dock with smooth animations
+- **Dynamic GitHub Projects** - Automatically fetches and displays repositories
+- **Tech Stack Showcase** - Animated logo carousel of technologies
+- **Spotlight Cards** - Interactive project cards with mouse-following spotlight
+- **Laser Flow Footer** - WebGL-powered animated footer
+- **Responsive Design** - Works seamlessly on all devices
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Frontend
+- React 19
+- TypeScript
+- Vite
+- Framer Motion
+- GSAP (GreenSock Animation Platform)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 3D & Graphics
+- Three.js
+- @react-three/fiber
+- @react-three/drei
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Styling
+- CSS3 with custom animations
+- Glassmorphism effects
+- Gradient designs
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### APIs
+- GitHub REST API (for dynamic project fetching)
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/sakshii893/myPortfolio.git
+cd myPortfolio
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies:
+```bash
+npm install
 ```
+
+3. Create a `.env` file in the root directory:
+```env
+VITE_GITHUB_USERNAME=your_github_username
+VITE_GITHUB_TOKEN=your_github_token
+```
+
+4. Run the development server:
+```bash
+npm run dev
+```
+
+5. Open [http://localhost:5173](http://localhost:5173) in your browser
+
+## 📦 Build
+
+To create a production build:
+```bash
+npm run build
+```
+
+To preview the production build:
+```bash
+npm run preview
+```
+
+## 🚢 Deployment
+
+This project is configured for GitHub Pages deployment.
+
+To deploy:
+```bash
+npm run deploy
+```
+
+## 📁 Project Structure
+
+```
+myPortfolio/
+├── public/
+│   ├── panda.webp          # Mascot image
+│   └── lazy-panda/         # 3D model assets
+├── src/
+│   ├── components/
+│   │   ├── Login.tsx       # Loading screen
+│   │   ├── Home.tsx        # Home page
+│   │   ├── About.tsx       # About section
+│   │   ├── Projects.tsx    # Projects showcase
+│   │   ├── Contact.tsx     # Contact form
+│   │   ├── ProfileCard.tsx # 3D tilt card
+│   │   ├── Dock.tsx        # Navigation dock
+│   │   ├── LogoLoop.tsx    # Tech stack carousel
+│   │   ├── Footer.tsx      # Footer with laser flow
+│   │   ├── TargetCursor.tsx # Custom cursor
+│   │   └── SpotlightCard.tsx # Interactive cards
+│   ├── App.tsx             # Main app component
+│   ├── App.css             # Global styles
+│   └── main.tsx            # Entry point
+├── .env                    # Environment variables (not committed)
+├── .gitignore              # Git ignore rules
+├── package.json            # Dependencies
+├── tsconfig.json           # TypeScript config
+├── vite.config.ts          # Vite configuration
+└── README.md               # This file
+```
+
+## 🎨 Key Components
+
+### ProfileCard
+- 3D tilt effect following mouse movement
+- Holographic gradient background
+- Smooth animations with Framer Motion
+
+### Dock Navigation
+- Mac-style magnification effect
+- Smooth transitions between sections
+- Active state indicators
+
+### SpotlightCard
+- Mouse-following spotlight effect
+- Used for project cards
+- Smooth gradient animations
+
+### TargetCursor
+- Custom animated cursor
+- Corner effects that snap to interactive elements
+- Spinning animation when idle
+
+### LogoLoop
+- Infinite horizontal scroll
+- Hover to pause
+- Displays tech stack icons
+
+## 🔒 Security
+
+- Environment variables are stored in `.env` (excluded from git)
+- GitHub token is never exposed in the codebase
+- All sensitive data is properly secured
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👤 Author
+
+**Sakshi Pawar**
+- GitHub: [@sakshii893](https://github.com/sakshii893)
+- Email: sakshiiipawar10@gmail.com
+
+## 🙏 Acknowledgments
+
+- Design inspiration from modern portfolio websites
+- Icons from [React Icons](https://react-icons.github.io/react-icons/)
+- 3D models and animations powered by Three.js
+- Animations by Framer Motion and GSAP
+
+---
+
+Made with ❤️ by Sakshi Pawar
