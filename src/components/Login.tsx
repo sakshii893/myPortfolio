@@ -65,7 +65,7 @@ const Login = ({ onLogin }: LoginProps) => {
 
         <div className="login-right">
           <div className="panda-container">
-            <img ref={pandaRef} src="/panda.webp" alt="Panda" className="panda-image" />
+            <img ref={pandaRef} src="https://res.cloudinary.com/di7srgawv/image/upload/v1772919144/panda_qckqsv.webp" alt="Panda" className="panda-image" />
           </div>
         </div>
       </div>
