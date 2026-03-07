@@ -78,7 +78,7 @@ const Home = ({ onNavigate }: HomeProps) => {
       <div className="home-container">
         <div className="profile-section">
           <ProfileCard
-            avatarUrl="https://res.cloudinary.com/di7srgawv/image/upload/v1772919144/panda_qckqsv.webp"
+            avatarUrl="https://res.cloudinary.com/di7srgawv/image/upload/w_600,q_auto,f_auto/v1772919144/panda_qckqsv.webp"
             name="Sakshi Pawar"
             title="Software Engineer"
             handle="sakshipawar"
