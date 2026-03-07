@@ -36,14 +36,9 @@ const Home = ({ onNavigate }: HomeProps) => {
   const fetchGitHubRepos = async () => {
     try {
       const username = import.meta.env.VITE_GITHUB_USERNAME || 'sakshii893'
-      const token = import.meta.env.VITE_GITHUB_TOKEN
       
       const headers: HeadersInit = {
         'Accept': 'application/vnd.github.v3+json'
-      }
-      
-      if (token) {
-        headers['Authorization'] = `Bearer ${token}`
       }
       
       const response = await fetch(
