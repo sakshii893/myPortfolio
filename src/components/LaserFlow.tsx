@@ -294,7 +294,7 @@ export const LaserFlow: React.FC<Props> = ({
   style,
   wispDensity = 1,
   dpr,
-  mouseSmoothTime = 0.0,
+  // mouseSmoothTime = 0.0,
   mouseTiltStrength = 0.01,
   horizontalBeamOffset = 0.1,
   verticalBeamOffset = 0.0,
