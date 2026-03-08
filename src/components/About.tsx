@@ -6,14 +6,19 @@ const About = () => {
       <h2 className="section-title">About Me</h2>
       <div className="about-content">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Hi, I'm Sakshi Pawar, a full-stack developer passionate about building modern, scalable web applications. 
+          I primarily work with the MERN stack using React, Next.js, Node.js, Express, and MongoDB, and I enjoy 
+          designing systems that go beyond simple CRUD applications.
         </p>
         <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-          culpa qui officia deserunt mollit anim id est laborum.
+          My projects involve technologies like WebRTC for real-time communication, Redis for caching, Kafka for 
+          event-driven systems, and cloud deployment using Docker, Kubernetes, and AWS. I am particularly interested 
+          in backend architecture, distributed systems, and building reliable production-level platforms.
+        </p>
+        <p>
+          I enjoy exploring how large-scale applications are designed and continuously improving my development 
+          skills through real-world projects. My goal is to build robust, scalable systems that solve real problems 
+          and deliver exceptional user experiences.
         </p>
       </div>
     </div>

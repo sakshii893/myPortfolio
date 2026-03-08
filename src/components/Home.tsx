@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa'
+import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import { AiOutlineStar, AiOutlineFork } from 'react-icons/ai'
 import ProfileCard from './ProfileCard'
 import SpotlightCard from './SpotlightCard'
@@ -94,23 +94,32 @@ const Home = ({ onNavigate }: HomeProps) => {
           />
           <div className="profile-content">
             <p className="bio">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-              exercitation ullamco laboris.
+              Hi, I'm Sakshi Pawar, a full-stack developer passionate about building modern, scalable web applications. 
+              I primarily work with the MERN stack using React, Next.js, Node.js, Express, and MongoDB, and I enjoy 
+              designing systems that go beyond simple CRUD applications. My projects involve technologies like WebRTC 
+              for real-time communication, Redis for caching, Kafka for event-driven systems, and cloud deployment 
+              using Docker, Kubernetes, and AWS. I am particularly interested in backend architecture, distributed 
+              systems, and building reliable production-level platforms. I enjoy exploring how large-scale applications 
+              are designed and continuously improving my development skills through real-world projects.
             </p>
             <div className="action-buttons">
               <button className="btn-primary cursor-target" onClick={handleContactClick}>Get in Touch</button>
-              <button className="btn-secondary cursor-target">Download CV</button>
+              <a 
+                href="https://drive.google.com/file/d/156cQn2jmnPmhyCzmJP8ip5K96CH7y4ST/view?usp=sharing" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-secondary cursor-target"
+                style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
+              >
+                Download CV
+              </a>
             </div>
             <div className="social-icons">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon cursor-target">
+              <a href="https://www.linkedin.com/in/sakshi-pawar-b0638630b/" target="_blank" rel="noopener noreferrer" className="social-icon cursor-target">
                 <FaLinkedin />
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-icon cursor-target">
+              <a href="https://github.com/sakshii893" target="_blank" rel="noopener noreferrer" className="social-icon cursor-target">
                 <FaGithub />
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon cursor-target">
-                <FaInstagram />
               </a>
             </div>
           </div>

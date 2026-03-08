@@ -1,4 +1,4 @@
-import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope } from 'react-icons/fa'
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'
 import LaserFlow from './LaserFlow'
 import './Footer.css'
 
@@ -47,14 +47,11 @@ const Footer = () => {
           <div className="footer-right">
             <p className="footer-connect">Connect with me</p>
             <div className="footer-social">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="footer-social-icon cursor-target">
+              <a href="https://www.linkedin.com/in/sakshi-pawar-b0638630b/" target="_blank" rel="noopener noreferrer" className="footer-social-icon cursor-target">
                 <FaLinkedin />
               </a>
               <a href="https://github.com/sakshii893" target="_blank" rel="noopener noreferrer" className="footer-social-icon cursor-target">
                 <FaGithub />
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="footer-social-icon cursor-target">
-                <FaInstagram />
               </a>
             </div>
           </div>
